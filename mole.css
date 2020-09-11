@@ -1,6 +1,7 @@
 /* Write your CSS here. */
 *{
     border: 1px solid black;
+    /* box-sizing: border-box; */
 }
 body {
     height: 100vh;
@@ -9,29 +10,35 @@ body {
 
 
 .mole-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     /* height: 100%;
     width: 100%; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .wgs {
     display: inline-block;
     position: relative;
-    height: 482px;
-    width: 640px;
+    height: 241px;
+    width: 320px;
+    overflow: hidden;
 }
 
 .wgs__mole-head {
     position: absolute;
-    left: 109px;
+    left: 54px;
+    transition: margin-top .25s;
+    width: 188px;
 }
 
 .wgs__mole-head--hidden {
-    margin-top: 482px;
+    margin-top: 241px;
 }
 
 .wgs__dirt-pile {
     position: absolute;
-    top: 262px;
-
+    top: 131px;
+    height: 110px;
+    /* height: 220px; */
 }
