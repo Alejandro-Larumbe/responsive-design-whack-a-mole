@@ -1,4 +1,7 @@
-let timerPopper;
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(popUpRandomMole, 0);
+})
 
 function getRamdomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -7,16 +10,19 @@ function getRamdomIntInclusive(min, max) {
 }
 
 function popUpRandomMole() {
-    let moleHeads = document.querySelectorAll(".wsg__mole-head")
-    const moleIndex = getRamdomIntInclusive(1, 7);
-    const moleHead = moleHeads[moleIndex]
+    let moleHeads = document.getElementsByClassName('wgs__mole-head')
+    let moleIndex = getRamdomIntInclusive(1, 7);
+    // console.log(moleIndex);
+    let moleHead = moleHeads[moleIndex]
+    // console.log(moleHeads)
+    console.log(moleHead)
+    moleHead.classList.remove('wgs__mole-head--hidden');
 
-    setTimeout(() => {
-
-        hideMole(moleHead)
-    }, 1000);
+    setTimeout(() => hideMole(moleHead), 1000);
 }
 
 function hideMole(mole) {
     mole.classList.add('wgs__mole-head--hidden')
+    setTimeout(popUpRandomMole, 1000);
 };
+
