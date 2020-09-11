@@ -1,7 +1,24 @@
 /* Write your CSS here. */
+*{
+    border: 1px solid black;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
 
+
+.mole-container {
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
+    justify-content: space-between;
+}
 .wgs {
+    display: inline-block;
     position: relative;
+    height: 482px;
+    width: 640px;
 }
 
 .wgs__mole-head {
@@ -9,7 +26,12 @@
     left: 109px;
 }
 
+.wgs__mole-head--hidden {
+    margin-top: 482px;
+}
+
 .wgs__dirt-pile {
     position: absolute;
     top: 262px;
+
 }
