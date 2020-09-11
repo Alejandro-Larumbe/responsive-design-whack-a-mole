@@ -1,1 +1,15 @@
 /* Write your CSS here. */
+
+.wgs {
+    position: relative;
+}
+
+.wgs__mole-head {
+    position: absolute;
+    left: 109px;
+}
+
+.wgs__dirt-pile {
+    position: absolute;
+    top: 262px;
+}
